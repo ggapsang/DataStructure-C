@@ -47,8 +47,14 @@ void add(){
 	scanf("%s", buf1);
 	scanf("%s", buf2);
 	
-	names[n] = strdup(buf1); //strdup, strcpy //
-	numbers[n] = strdup(buf2);
+	int i n-1;
+	while (i>=0 && strcmp(names[i], buf1) > 0) {
+		names[i+1] = names[i];
+		numbers[i+1] numbers[i];
+		i--;
+	}
+	names[i+1] = strdup(buf1); //strdup, strcpy //
+	numbers[i+1] = strdup(buf2);
 	n++;
 	
 	printf("%s was added successfully.\n", buf1);
